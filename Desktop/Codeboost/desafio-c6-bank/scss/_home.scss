@@ -1,0 +1,88 @@
+.s-hero {
+  background: url("../img/hero-banner.jpg") no-repeat center right;
+  height: 70rem;
+  width: 100%;
+  .left {
+    padding-top: 18.9rem;
+    .programa-pontos {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3.3rem;
+      span {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 10rem;
+        color: $white;
+        background-color: #006d8f;
+        font-weight: 500;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        margin-right: 1.2rem;
+      }
+      p {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 150%;
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+    h1 {
+      max-width: 74rem;
+      margin-bottom: 2.4rem;
+    }
+    p {
+      max-width: 36.5rem;
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: 150%;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .btn-secondary {
+      margin-top: 4rem;
+    }
+  }
+
+  @include responsive(991px) {
+    background-position: left;
+  }
+  @include responsive(768px) {
+    height: 66.7rem;
+    .left {
+      padding-top: 16rem;
+      h1 {
+        max-width: 55rem;
+        font-size: 4rem;
+        letter-spacing: -0.03em;
+      }
+    }
+  }
+  @include responsive(600px) {
+    .left {
+      @include flex(column, center, center);
+      h1 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
+  @include responsive(480px) {
+    .left {
+      .programa-pontos {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+  @include responsive(375px) {
+    height: 63rem;
+    .left {
+      padding-top: 11rem;
+      h1 {
+        font-size: 3.4rem;
+      }
+    }
+  }
+}
